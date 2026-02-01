@@ -46,5 +46,11 @@
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
     <SupportedOSPlatformVersion>10.0.18362.0</SupportedOSPlatformVersion>
+    <Copyright>© 2026 Tayra Sakurai</Copyright>
+    <RepositoryUrl>https://github.com/Tayra-Sakurai/Nagaokakyo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>ja-JP</NeutralLanguage>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 </Project>
