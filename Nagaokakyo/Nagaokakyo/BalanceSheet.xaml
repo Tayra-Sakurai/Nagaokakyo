@@ -20,6 +20,7 @@
         </Grid.ColumnDefinitions>
         <ListView ItemsSource="{x:Bind tables.Tables}">
             <ListView.Header>
+                <!--
                 <controls:DataTable>
                     <controls:DataColumn x:Uid="IdColumn"/>
                     <controls:DataColumn x:Uid="DateTimeColumn"/>
@@ -29,9 +30,36 @@
                     <controls:DataColumn x:Uid="NanacoColumn"/>
                     <controls:DataColumn x:Uid="CoopColumn"/>
                 </controls:DataTable>
+                -->
+                <Grid Padding="12,16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="144"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="ID"/>
+                    <TextBlock Grid.Column="1"
+                               Text="日時"/>
+                    <TextBlock Grid.Column="2"
+                               Text="項目"/>
+                    <TextBlock Grid.Column="3"
+                               Text="現金"/>
+                    <TextBlock Grid.Column="4"
+                               Text="ICOCA"/>
+                    <TextBlock Grid.Column="5"
+                               Text="nanaco"/>
+                    <TextBlock Grid.Column="6"
+                               Text="生協電子マネー"/>
+                </Grid>
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="models:Table">
+                    <!--
                     <controls:DataRow>
                         <TextBlock Text="{x:Bind Id}"/>
                         <TextBlock Text="{x:Bind DateTime}"/>
@@ -41,8 +69,40 @@
                         <TextBlock Text="{x:Bind Nanaco}"/>
                         <TextBlock Text="{x:Bind Coop}"/>
                     </controls:DataRow>
+                    -->
+                    <Grid Padding="12,16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="144"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   Text="{x:Bind Id}"/>
+                        <TextBlock Grid.Column="1"
+                                   Text="{x:Bind DateTime}"/>
+                        <TextBlock Grid.Column="2"
+                                   Text="{x:Bind Item}"/>
+                        <TextBlock Grid.Column="3"
+                                   Text="{x:Bind Cash}"/>
+                        <TextBlock Grid.Column="4"
+                                   Text="{x:Bind Icoca}"/>
+                        <TextBlock Grid.Column="5"
+                                   Text="{x:Bind Nanaco}"/>
+                        <TextBlock Grid.Column="6"
+                                   Text="{x:Bind Coop}"/>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style BasedOn="{StaticResource DefaultListViewItemStyle}"
+                       TargetType="ListViewItem">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
         <CommandBar Grid.Row="1" DefaultLabelPosition="Right">
             <AppBarButton Icon="Add" x:Uid="AddBtn"

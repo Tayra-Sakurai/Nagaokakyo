@@ -11,10 +11,10 @@ namespace Kizu.Models
         public int Id { get; set; }
         public string Item { get; set; } = string.Empty;
         public DateTime DateTime { get; set; } = DateTime.Now;
-        public long Cash { get; set; } = 0;
-        public long Icoca { get; set; } = 0;
-        public long Nanaco { get; set; } = 0;
-        public long Coop { get; set; } = 0;
+        public int Cash { get; set; } = 0;
+        public int Icoca { get; set; } = 0;
+        public int Nanaco { get; set; } = 0;
+        public int Coop { get; set; } = 0;
 
         public int CompareTo(Table other)
         {

@@ -24,13 +24,13 @@ namespace Kizu.ViewModels
         [ObservableProperty]
         private string item;
         [ObservableProperty]
-        private long cash;
+        private double cash;
         [ObservableProperty]
-        private long icoca;
+        private double icoca;
         [ObservableProperty]
-        private long nanaco;
+        private double nanaco;
         [ObservableProperty]
-        private long coop;
+        private double coop;
 
         public TableViewModel()
         {
@@ -72,10 +72,10 @@ namespace Kizu.ViewModels
             DateTime dateTime = Date.Date;
             table.DateTime = dateTime.Add(TimeOfDay);
             table.Item = Item;
-            table.Cash = Cash;
-            table.Icoca = Icoca;
-            table.Nanaco = Nanaco;
-            table.Coop = Coop;
+            table.Cash = (int)Cash;
+            table.Icoca = (int)Icoca;
+            table.Nanaco = (int)Nanaco;
+            table.Coop = (int)Coop;
             context.Update(table);
         }
 
