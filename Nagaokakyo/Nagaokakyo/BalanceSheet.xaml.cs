@@ -17,6 +17,7 @@ using Windows.Foundation.Collections;
 using System.Threading.Tasks;
 using Windows.Graphics.Display;
 using Kizu.Models;
+using System.Diagnostics;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,6 +38,7 @@ namespace Nagaokakyo
 
             DetailBtn.Click += DetailBtn_Click;
             SuperTable.SelectionChanged += SuperTable_SelectionChanged;
+            Debug.WriteLine(System.IO.Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Kizu.db"));
         }
 
         private void SuperTable_SelectionChanged(object sender, SelectionChangedEventArgs e)

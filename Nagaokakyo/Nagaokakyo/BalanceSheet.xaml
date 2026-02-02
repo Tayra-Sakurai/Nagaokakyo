@@ -71,7 +71,7 @@
                         <TextBlock Text="{x:Bind Coop}"/>
                     </controls:DataRow>
                     -->
-                    <Grid Padding="12,16">
+                    <Grid Padding="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="144"/>

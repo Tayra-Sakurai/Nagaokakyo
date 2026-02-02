@@ -13,7 +13,7 @@ namespace Kizu.ViewModels
 {
     public partial class TablesViewModel : ObservableObject
     {
-        private KizuContext context;
+        private KizuContext2 context;
 
         [ObservableProperty]
         private ObservableCollection<Table> tables;
