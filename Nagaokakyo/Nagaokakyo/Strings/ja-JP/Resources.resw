@@ -125,21 +125,49 @@
     <value>現金</value>
     <comment>Cash column header.</comment>
   </data>
+  <data name="CashInput.Header" xml:space="preserve">
+    <value>現金</value>
+    <comment>Cash input.</comment>
+  </data>
   <data name="CoopColumn.Content" xml:space="preserve">
     <value>生協電子マネー</value>
     <comment>CO-OP e-Money.</comment>
+  </data>
+  <data name="CoopInput.Header" xml:space="preserve">
+    <value>生協電子マネー</value>
+    <comment>CO-OP e-Money header.</comment>
+  </data>
+  <data name="DatePicker.Header" xml:space="preserve">
+    <value>日付</value>
+    <comment>date picker heading.</comment>
   </data>
   <data name="DateTimeColumn.Content" xml:space="preserve">
     <value>日時</value>
     <comment>Date and time column header.</comment>
   </data>
+  <data name="DeleteBtn.Label" xml:space="preserve">
+    <value>削除</value>
+    <comment>Delete button.</comment>
+  </data>
   <data name="DetailBtn.Label" xml:space="preserve">
     <value>編集</value>
     <comment>Editing button label.</comment>
   </data>
+  <data name="DetailDetail.Text" xml:space="preserve">
+    <value>このページでは，データベースに登録された情報を編集・確認・削除できます．</value>
+    <comment>Descriptions.</comment>
+  </data>
+  <data name="DetailTitle.Text" xml:space="preserve">
+    <value>詳細表示・編集画面</value>
+    <comment>title.</comment>
+  </data>
   <data name="IcocaColumn.Content" xml:space="preserve">
     <value>ICOCA</value>
     <comment>ICOCA column header.</comment>
+  </data>
+  <data name="IcocaInput.Header" xml:space="preserve">
+    <value>ICOCA</value>
+    <comment>ICOCA value input heading.</comment>
   </data>
   <data name="IdColumn.Content" xml:space="preserve">
     <value>ID</value>
@@ -149,6 +177,10 @@
     <value>項目</value>
     <comment>Item column header.</comment>
   </data>
+  <data name="ItemInput.Header" xml:space="preserve">
+    <value>項目</value>
+    <comment>Item input header.</comment>
+  </data>
   <data name="LoadBtn.Label" xml:space="preserve">
     <value>同期</value>
     <comment>Loading button label.</comment>
@@ -156,5 +188,25 @@
   <data name="NanacoColumn.Content" xml:space="preserve">
     <value>nanaco</value>
     <comment>nanaco column header.</comment>
+  </data>
+  <data name="NanacoInput.Header" xml:space="preserve">
+    <value>nanaco</value>
+    <comment>nanaco value header.</comment>
+  </data>
+  <data name="ReturnBtn.Label" xml:space="preserve">
+    <value>戻る</value>
+    <comment>Returning button.</comment>
+  </data>
+  <data name="SaveBtn.Label" xml:space="preserve">
+    <value>保存</value>
+    <comment>Save button.</comment>
+  </data>
+  <data name="SendBtn.Label" xml:space="preserve">
+    <value>送信</value>
+    <comment>Save changes action button.</comment>
+  </data>
+  <data name="TimePicker.Header" xml:space="preserve">
+    <value>時刻</value>
+    <comment>Time picker heading.</comment>
   </data>
 </root>

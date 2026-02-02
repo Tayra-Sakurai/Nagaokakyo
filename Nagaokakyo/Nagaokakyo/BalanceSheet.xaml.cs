@@ -16,6 +16,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System.Threading.Tasks;
 using Windows.Graphics.Display;
+using Kizu.Models;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -33,6 +34,25 @@ namespace Nagaokakyo
         {
             InitializeComponent();
             tables = App.Current.Services.GetService<TablesViewModel>();
+
+            DetailBtn.Click += DetailBtn_Click;
+            SuperTable.SelectionChanged += SuperTable_SelectionChanged;
+        }
+
+        private void SuperTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (SuperTable.SelectedItem is Table)
+            {
+                DetailBtn.IsEnabled = true;
+            }
+        }
+
+        private void DetailBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (SuperTable.SelectedItem is Table table)
+            {
+                Frame.Navigate(typeof(DetailPage), table);
+            }
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kizu.Migrations
 {
     [DbContext(typeof(KizuContext))]
-    [Migration("20260202051105_CreationKizu")]
-    partial class CreationKizu
+    [Migration("20260202113454_CreateKizu")]
+    partial class CreateKizu
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

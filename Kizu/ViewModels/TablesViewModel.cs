@@ -39,6 +39,7 @@ namespace Kizu.ViewModels
         {
             Table table = new();
             await context.Tables.AddAsync(table);
+            await context.SaveChangesAsync();
             await LoadAsync();
         }
     }

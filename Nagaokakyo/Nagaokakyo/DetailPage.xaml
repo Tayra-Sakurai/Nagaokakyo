@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Nagaokakyo.DetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Nagaokakyo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+          Padding="12,16" RowSpacing="8" ColumnSpacing="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Style="{StaticResource SubheaderTextBlockStyle}"
+                   x:Uid="DetailTitle" Grid.ColumnSpan="3"/>
+        <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                   TextWrapping="Wrap"
+                   x:Uid="DetailDetail"
+                   Grid.Row="1" Grid.ColumnSpan="3"/>
+        <CalendarDatePicker Grid.Row="2" Grid.Column="0"
+                            Date="{x:Bind viewModel.Date, Mode=TwoWay}"
+                            x:Uid="DatePicker"/>
+        <TimePicker Grid.Row="2" Grid.Column="1"
+                    SelectedTime="{x:Bind viewModel.TimeOfDay, Mode=TwoWay}"
+                    x:Uid="TimePicker"/>
+        <TextBox Grid.Row="3" Grid.ColumnSpan="3"
+                 x:Uid="ItemInput" Text="{x:Bind viewModel.Item, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <NumberBox Grid.Row="4" Grid.ColumnSpan="3"
+                   Value="{x:Bind viewModel.Cash, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   x:Uid="CashInput"/>
+        <NumberBox Grid.Row="5" Grid.ColumnSpan="3"
+                   Value="{x:Bind viewModel.Icoca, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   x:Uid="IcocaInput"/>
+        <NumberBox Grid.Row="6" Grid.ColumnSpan="3"
+                   Value="{x:Bind viewModel.Nanaco, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   x:Uid="NanacoInput"/>
+        <NumberBox Grid.Row="7" Grid.ColumnSpan="3"
+                   Value="{x:Bind viewModel.Coop, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                   x:Uid="CoopInput"/>
+        <CommandBar Grid.Row="8" Grid.ColumnSpan="3" DefaultLabelPosition="Right">
+            <AppBarButton x:Uid="ReturnBtn" x:Name="ReturnBtn">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#xE845;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton x:Uid="SaveBtn" Icon="SaveLocal"
+                          Command="{x:Bind viewModel.UpdateCommand}"/>
+            <AppBarButton x:Uid="DeleteBtn" Icon="Delete"
+                          Command="{x:Bind viewModel.DeleteCommand}"/>
+            <AppBarButton x:Uid="SendBtn" Icon="Send"
+                          Command="{x:Bind viewModel.SaveCommand}"/>
+        </CommandBar>
+    </Grid>
+</Page>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Kizu.Migrations
 {
     /// <inheritdoc />
-    public partial class CreationKizu : Migration
+    public partial class CreateKizu : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
