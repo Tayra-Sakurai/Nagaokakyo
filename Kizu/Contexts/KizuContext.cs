@@ -12,19 +12,10 @@ namespace Kizu.Contexts
     {
         public DbSet<Table> Tables { get; set; }
 
-        public string Path { get; }
-
-        public KizuContext()
-        {
-            var folderLocal = Environment.SpecialFolder.LocalApplicationData;
-            string path = Environment.GetFolderPath(folderLocal);
-            Path = System.IO.Path.Join(path, "Kizu.db");
-        }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(
-                $"Data Source={Path}");
+                "Data Source=Kizu.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

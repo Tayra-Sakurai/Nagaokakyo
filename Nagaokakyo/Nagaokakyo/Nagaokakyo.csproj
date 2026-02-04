@@ -45,6 +45,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Kizu.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="DetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
